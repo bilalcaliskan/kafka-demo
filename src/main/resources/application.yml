@@ -1,0 +1,20 @@
+---
+
+server:
+  port: 8080
+  compression:
+    enabled: true
+
+management:
+  server:
+    port: 8081
+
+spring:
+  kafka:
+    consumer:
+      bootstrap-servers: 10.0.15.26:9092,10.0.15.27:9092,10.0.15.28:9092
+      group-id: kafka-demo
+      auto-offset-reset: earliest
+    producer:
+      bootstrap-servers: 10.0.15.26:9092,10.0.15.27:9092,10.0.15.28:9092
+      compression-type: snappy
